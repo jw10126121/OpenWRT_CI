@@ -50,6 +50,13 @@
     Uboot 刷入squashfs-factory.bin #第一次刷完5分钟,之后重启15秒开机。
     Luci 刷入squashfs-sysupgrade.bin #不保留配置开机1分钟开机。
 
+
+## 刷UBoot方法:
+### SSH下:
+
+<https://github.com/ftkey/OpenWRT-CI/tree/uboot>
+
+
 ## 软件包
 <details><summary>CONFIG_PACKAGE_luci-app-xxx=y</summary>
     
