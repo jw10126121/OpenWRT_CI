@@ -225,6 +225,9 @@ jobs:
           if [ -d "./bin/targets/" ]; then
             find ./bin/targets/ -type f -exec sh -c 'echo -n "{} "; du -b "{}" | cut -f1 | awk '"'"'{ if ($1 < 1024*1024) printf "%.2fKB\n", $1/1024; else printf "%.2fMB\n", $1/(1024*1024); }'"'" \;          
           fi
+          if [ -d "./bin/packages/" ]; then
+            find ./bin/packages/ -type f -exec sh -c 'echo -n "{} "; du -b "{}" | cut -f1 | awk '"'"'{ if ($1 < 1024*1024) printf "%.2fKB\n", $1/1024; else printf "%.2fMB\n", $1/(1024*1024); }'"'" \; | sort -n -k2,2 -r        
+          fi
           
           if [[ $WRT_TEST != 'true' ]]; then
             find ./bin/targets/ -iregex ".*\(buildinfo\|json\|manifest\|sha256sums\|packages\)$" -exec rm -rf {} +
