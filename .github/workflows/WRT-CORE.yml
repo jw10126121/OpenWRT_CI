@@ -188,7 +188,7 @@ jobs:
           $GITHUB_WORKSPACE/Scripts/Settings.sh
 
           make defconfig -j$(nproc)
-           ./scripts/diffconfig.sh
+          ./scripts/diffconfig.sh > seed.config
            
       - name: Download Packages
         if: env.WRT_TEST != 'true'
@@ -221,6 +221,9 @@ jobs:
           cd ./wrt/ && mkdir ./upload/
 
           cp -f ./.config ./upload/Config_"$WRT_TARGET"_"$WRT_NAME"_"$WRT_VER"_"$WRT_DATE".txt
+          cp -f ./seed.config ./upload/Config_"$WRT_TARGET"_"$WRT_NAME"_"$WRT_VER"_"$WRT_DATE".seed.txt
+
+          
           
           if [ -d "./bin/targets/" ]; then
             find ./bin/targets/ -type f -exec sh -c 'echo -n "{} "; du -b "{}" | cut -f1 | awk '"'"'{ if ($1 < 1024*1024) printf "%.2fKB\n", $1/1024; else printf "%.2fMB\n", $1/(1024*1024); }'"'" \;          

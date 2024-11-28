@@ -52,8 +52,10 @@
 
 
 ## 刷UBoot方法:
-### SSH下:
+### 9008 & TTL下:
+<https://huawei.aito.eu.org/318.html>
 
+### SSH下:
 <https://github.com/ftkey/OpenWRT-CI/tree/uboot>
 
 
