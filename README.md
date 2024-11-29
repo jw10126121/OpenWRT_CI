@@ -1,5 +1,9 @@
 # ER1-WRT-CI
 
+固件下载地址:
+https://github.com/ftkey/OpenWRT-CI/releases ,如需自定义, 请fork.
+
+
 只编译: 
 
     ipq60xx_DEVICE_jdcloud_re-cs-07=y # 京东云RE-CS-07 (太乙)
@@ -92,7 +96,9 @@
 
 
 ## THKS
-VIKINGYFY | LiBwrt-op | laipeng668 | ImmortalWRT | LEDE
+特别感谢QQ群:560094821
+
+VIKINGYFY | LiBwrt-op | ZqinKing | laipeng668 | ImmortalWRT | LEDE | MORE AND MORE
 
 ## 特别提示
 本人不对任何人因使用本固件所遭受的任何理论或实际的损失承担责任！
