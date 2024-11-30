@@ -73,9 +73,6 @@ https://github.com/ftkey/OpenWRT-CI/releases ,如需自定义, 请fork.
     CONFIG_PACKAGE_luci-app-alist=y  # Alist网络服务
     CONFIG_PACKAGE_luci-app-cpufreq=y  # CPU频率策略控制
     CONFIG_PACKAGE_luci-app-ddns=y  # 动态DNS客户端
-    CONFIG_PACKAGE_luci-app-diskman=y  # 磁盘管理
-    CONFIG_PACKAGE_luci-app-diskman_INCLUDE_btrfs_progs=y  # 支持Btrfs文件系统
-    CONFIG_PACKAGE_luci-app-diskman_INCLUDE_lsblk=y  # 支持lsblk磁盘工具
     CONFIG_PACKAGE_luci-app-openvpn-server=y  # OpenVPN服务器
     CONFIG_PACKAGE_luci-app-samba4=y  # Samba文件共享
     CONFIG_PACKAGE_luci-app-socat=y  # Socat端口转发工具
