@@ -250,14 +250,14 @@ jobs:
       - name: Release Firmware
         uses: softprops/action-gh-release@master
         with:
-          tag_name: R${{ env.WRT_DATE }}_${{ env.WRT_NAME }}
-          name: R${{ env.WRT_DATE }} for ${{ env.WRT_NAME }}
+          tag_name: ${{ env.WRT_TARGET }}_R${{ env.WRT_DATE }}_${{ env.WRT_NAME }}
+          name: ${{ env.WRT_TARGET }}_R${{ env.WRT_DATE }} for ${{ env.WRT_NAME }}
           files: ./wrt/upload/*.*
           body: |
 
             **This is ${{ env.WRT_NAME }} OpenWrt Firmware for ${{ env.WRT_TYPE }}**
             ### 📒 固件信息(无WIFI)
-            - 🖥️ 这是  ${{ env.WRT_TYPE }} 使用的 OpenWrt 固件
+            - 🖥️ 这是  ${{ env.WRT_TYPE }}_${{ env.WRT_TARGET }} 使用的 OpenWrt 固件
             - 💻 平台: ${{ env.WRT_TARGET }}
             - ⚽ 源码: ${{ env.WRT_SOURCE }}
             - 💝 分支: ${{ env.WRT_BRANCH }}
